@@ -24,3 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('contactBox').style.display = 'none';
     });
 });
+// תפריט המבורגר
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar nav ul");
+
+    hamburger.addEventListener("click", function() {
+        navMenu.classList.toggle("show");
+    });
+});
