@@ -101,13 +101,21 @@ a {
     padding: 10px 20px;
     background-color: #ffc107;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 15px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    position: relative;
+    position: absolute;
     z-index: 10;
+    font-size: 15px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap; /* מונע גלישת טקסט */
+    min-width: 120px;    /* מבטיח מספיק מקום לטקסט */
 }
+
 
 /* עבור מסכים קטנים יותר, כמו טלפונים ניידים */
 @media (max-width: 768px) {
