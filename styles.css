@@ -585,7 +585,7 @@ a {
         flex-direction: column;
         background-color: #1F2937;
         position: absolute;
-        top: 50px; /* כאן ניתן לשנות את הגובה שבו התפריט נפתח */
+        top: 60px; /* כאן ניתן לשנות את הגובה שבו התפריט נפתח */
         right: 0;
         width: 100%;
         gap: 10px;
