@@ -606,3 +606,25 @@ a {
         justify-content: space-between;
     }
 }
+@media (max-width: 768px) {
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1F2937;
+        position: absolute;
+        top: 0; /* משנה את המרווח מלמעלה */
+        right: 0;
+        width: 100%;
+        gap: 10px;
+        padding: 0; /* מסיר padding מיותר */
+        margin: 0; /* מסיר margin מיותר */
+    }
+
+    .navbar nav ul.show {
+        display: flex;
+    }
+
+    .navbar .container {
+        padding: 0;
+    }
+}
