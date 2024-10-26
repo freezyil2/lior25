@@ -585,7 +585,7 @@ a {
         flex-direction: column;
         background-color: #1F2937;
         position: absolute;
-        top: 60px; /* מיקום מתחת לכותרת */
+        top: 0; /* הצמדת התפריט לראש העמוד */
         right: 0;
         width: 100%;
         gap: 10px;
@@ -608,4 +608,3 @@ a {
         justify-content: space-between;
     }
 }
-
