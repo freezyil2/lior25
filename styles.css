@@ -585,11 +585,12 @@ a {
         flex-direction: column;
         background-color: #1F2937;
         position: absolute;
-        top: 60px;
+        top: 60px; /* מיקום מתחת לכותרת */
         right: 0;
         width: 100%;
         gap: 10px;
         padding: 10px;
+        margin: 0;
     }
 
     .navbar nav ul.show {
@@ -601,66 +602,10 @@ a {
         display: block;
     }
 
+    /* עיצוב התפריט במסכים קטנים */
     .navbar .container {
         flex-direction: row-reverse;
         justify-content: space-between;
     }
 }
-@media (max-width: 768px) {
-    .navbar nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #1F2937;
-        position: absolute;
-        top: 0; /* משנה את המרווח מלמעלה */
-        right: 0;
-        width: 100%;
-        gap: 10px;
-        padding: 0; /* מסיר padding מיותר */
-        margin: 0; /* מסיר margin מיותר */
-    }
 
-    .navbar nav ul.show {
-        display: flex;
-    }
-
-    .navbar .container {
-        padding: 0;
-    }
-}
-/* סגנון כפתור המבורגר */
-.hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-/* הצגת כפתור המבורגר במסכים קטנים */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    
-    .navbar nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #1F2937;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .navbar nav ul.show {
-        display: flex;
-    }
-
-    /* עיצוב לתצוגת סגירה של התפריט */
-    .navbar .container {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-}
