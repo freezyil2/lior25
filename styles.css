@@ -84,11 +84,12 @@ a {
 
 .hero-text {
     position: absolute;
-    top: 39%;
+    top: 30%; /* מיקום הכותרת */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    width: 90%; /* מתאים לטקסט ארוך יותר */
 }
 
 .hero-text h1 {
@@ -96,6 +97,7 @@ a {
     margin-bottom: 20px;
 }
 
+/* סגנון כפתור ה-CTA */
 .cta-button {
     background-color: #FFC107;
     padding: 10px 20px;
@@ -104,38 +106,30 @@ a {
     cursor: pointer;
     font-size: 15px;
     border-radius: 5px;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     text-align: center;
-    white-space: nowrap; /* מונע גלישת טקסט */
-    min-width: 120px;    /* מבטיח מספיק מקום לטקסט */
+    white-space: nowrap;
+    min-width: 120px;
+    margin-top: 15px; /* מרווח תחתון לכותרת */
 }
 
-
-/* עבור מסכים קטנים יותר, כמו טלפונים ניידים */
+/* התאמות למובייל */
 @media (max-width: 768px) {
-    .cta-button {
-        font-size: 16px; /* גודל טקסט קטן יותר */
-        padding: 8px 15px; /* מרווח קטן יותר */
-    }
-
-    /* מרווחים בין הכפתור לטקסט */
-    .cta-section {
-        padding: 20px;
-        text-align: center;
+    .hero-text h1 {
+        font-size: 24px; /* גודל קטן יותר לכותרת */
+        margin-bottom: 10px;
     }
 
     .cta-button {
-        margin-top: 15px; /* רווח נוסף מעל הכפתור */
-    }
-
-    .cta-text {
-        font-size: 24px; /* גודל טקסט קטן יותר עבור מובייל */
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 15px; /* מרווח מתחת לכותרת */
+        position: relative; /* מבטל את ה-position: absolute במובייל */
+        top: auto;
+        left: auto;
+        transform: none;
     }
 }
-
 
 /* Filter Section */
 .filter-section {
