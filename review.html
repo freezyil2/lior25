@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="לקוחות ממליצים על חוויות ההפלגה שלהם עם קחו לכל. קראו ביקורות חיוביות והתרשמו מהשירותים המוצעים.">
     <title>לקוחות ממליצים</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="review-page"> <!-- שמרתי רק תג <body> אחד -->
-
+<body id="review-page">
+    <!-- Top Navigation Bar -->
     <header class="navbar">
         <div class="container">
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
             <nav>
-              <ul>
-                <li><a href="index.html" class="active">עמוד הבית</a></li>
-                <li><a href="#">יעדי הפלגה</a></li>
-                <li><a href="#">חברות הפלגה</a></li>
-                <li><a href="#">הקהילה שלנו</a></li>
-                <li><a href="about.html">אודותינו</a></li>
-                <li><a href="review.html">לקוחות ממליצים</a></li>
-                <li><a href="#">יצירת קשר</a></li>
-              </ul>
+                <ul>
+                    <li><a href="index.html" class="active">עמוד הבית</a></li>
+                    <li><a href="#">יעדי הפלגה</a></li>
+                    <li><a href="#">חברות הפלגה</a></li>
+                    <li><a href="#">הקהילה שלנו</a></li>
+                    <li><a href="about.html">אודותינו</a></li>
+                    <li><a href="review.html">לקוחות ממליצים</a></li>
+                    <li><a href="#">יצירת קשר</a></li>
+                </ul>
             </nav>
             <div class="logo">
                 <img src="logo.png" alt="Direct Cruise Logo">
-                <span></span>
             </div>
         </div>
     </header>
@@ -33,24 +34,19 @@
         <h1>לקוחות ממליצים</h1>
         <div class="gallery">
             <div class="review-card">
-                <img src="12s.jpg" alt="לקוח ממליץ">
-                <p class="client-quote"></p>
+                <img src="12s.jpg" alt="המלצה מלקוח">
             </div>
             <div class="review-card">
-                <img src="123.jpg" alt="לקוח ממליץ">
-                <p class="client-quote"></p>
+                <img src="123.jpg" alt="המלצה מלקוח">
             </div>
             <div class="review-card">
-                <img src="s234.jpg" alt="לקוח ממליץ">
-                <p class="client-quote"></p>
+                <img src="s234.jpg" alt="המלצה מלקוח">
             </div>
             <div class="review-card">
-                <img src="sd2521.jpg" alt="לקוח ממליץ">
-                <p class="client-quote"></p>
+                <img src="sd2521.jpg" alt="המלצה מלקוח">
             </div>
             <div class="review-card">
-                <img src="sd25.jpg" alt="לקוח ממליץ">
-                <p class="client-quote"></p>
+                <img src="sd25.jpg" alt="המלצה מלקוח">
             </div>
         </div>
     </main>
@@ -61,60 +57,31 @@
         <img class="modal-content" id="fullImage">
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <!-- קוד footer כאן -->
-        </div>
-    </footer>
-
-    <!-- JavaScript למודאל -->
-    <script>
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('fullImage');
-        const closeBtn = document.getElementsByClassName('close')[0];
-
-        document.querySelectorAll('.review-card img').forEach(img => {
-            img.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src; // לוקח את ה-src של התמונה ולשים אותו במודאל
-            }
-        });
-
-        // סוגרים את המודאל כאשר לוחצים על ה-X
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // סוגרים את המודאל כאשר לוחצים מחוץ לתמונה
-        modal.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <!-- תיבת קשר צפה -->
     <div class="floating-button" id="contactBox">
         <span class="close-btn" onclick="closeButton()">×</span>
         <div class="contact">
             <br> 
             <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank">טופס צור קשר</a>
         </div>
-         <div class="social-icons">
+        <div class="social-icons">
             <a href="https://www.facebook.com/groups/2054277628126202" target="_blank">
                 <img src="427549f6f22470ff93ca714479d180c2.jpg" alt="Facebook" class="icon">
             </a>
             <a href="https://api.whatsapp.com/send?phone=9720523854038" target="_blank">
-              <img src="square-whatsapp-brands-solid.svg" alt="Instagram" class="icon"></a>
-  
-              <div class="lior-icons">
-                  <img src="logo.png" alt="Facebook" class="icon">
-              </div>
+                <img src="square-whatsapp-brands-solid.svg" alt="WhatsApp" class="icon">
+            </a>
+            <div class="lior-icons">
+                <img src="logo.png" alt="Facebook" class="icon">
+            </div>
         </div>
     </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h3>חברות </h3>
+                    <h3>חברות</h3>
                     <ul>
                         <li><a href="royal-caribbean.html">חברה אחת</a></li>
                         <li><a href="celebrity-cruises.html">חברה2</a></li>
@@ -156,5 +123,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- חיבור קובץ JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
