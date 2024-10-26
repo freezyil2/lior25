@@ -9,8 +9,8 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%; /* מבטיח שהתוכן יתפוס רק 100% מגובה המסך */
-    overflow-x: hidden; /* מונע גלילה אופקית */
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -33,9 +33,9 @@ a {
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 60px; /* גובה מוגדר */
+    height: 60px;
     background-color: #1F2937;
-    overflow: hidden; /* מונע גלישה */
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -208,23 +208,67 @@ a {
 @media (max-width: 768px) {
     /* כפתור המבורגר */
     .hamburger {
-        display: block; /* הצגת כפתור המבורגר במובייל */
+        display: block;
+        font-size: 24px;
+        color: white;
     }
 
     /* הסתרת תפריט ברזולוציות קטנות */
     .navbar nav ul {
-        display: none; /* הסתרת תפריט במצב רגיל */
+        display: none;
         flex-direction: column;
-        gap: 10px;
         background-color: #1F2937;
-        padding: 10px;
         position: absolute;
-        top: 60px; /* מתחיל מתחת לסרגל הניווט */
-        right: 0;
+        top: 60px;
         width: 100%;
+        gap: 10px;
+        padding: 10px;
     }
 
     .navbar nav ul.show {
-        display: flex; /* הצגת תפריט כאשר לוחצים על המבורגר */
+        display: flex;
+    }
+
+    .navbar .logo {
+        margin-left: 20px;
+    }
+
+    /* טקסט כותרת */
+    .hero-text h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* התוכן הראשי */
+    .image-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .image-item {
+        max-width: 100%;
+    }
+
+    /* כותרות ופרטי התוכן */
+    .text-overlay {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    /* עיצוב לפוטר */
+    .footer-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-column {
+        min-width: auto;
     }
 }
