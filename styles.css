@@ -29,15 +29,14 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #1F2937; /* צבע רקע */
-    transition: top 0.3s, background-color 0.3s; /* מעבר חלק */
+    background-color: #1F2937;
+    transition: top 0.3s, background-color 0.3s;
     z-index: 1000;
 }
 
 .navbar.scrolled {
-    background-color: #000000; /* צבע רקע נשמר כשגוללים */
+    background-color: #000000;
 }
-
 
 .navbar .container {
     display: flex;
@@ -109,10 +108,9 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    white-space: nowrap; /* מונע גלישת טקסט */
-    min-width: 120px;    /* מבטיח מספיק מקום לטקסט */
+    white-space: nowrap;
+    min-width: 120px;
 }
-
 
 /* Filter Section */
 .filter-section {
@@ -144,21 +142,20 @@ a {
     justify-content: space-around;
     align-items: center;
     margin: 20px 0;
-    gap: 100px; /* יוצר רווח בין הקוביות */
+    gap: 100px;
 }
 
 .image-item {
     position: relative;
-    width: 500px; /* רוחב כל תמונה */
-    text-decoration: none; /* ביטול קו תחתון של קישורים */
-    display: inline-block; /* הופך את הקוביה ללחיצה */
-    transition: transform 0.3s, box-shadow 0.3s; /* לאנימציה חלקה */
+    width: 500px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
 
 .image-item img {
     width: 100%;
-    border-radius: 10px; /* פינות מעוגלות */
+    border-radius: 10px;
 }
 
 .text-overlay {
@@ -175,10 +172,9 @@ a {
     border-radius: 5px;
 }
 
-/* אפקט לחיצה על הקובייה */
 .image-item:hover {
-    transform: scale(1.05); /* מגדיל את הקוביה קצת */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל כאשר מעבירים את העכבר */
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Section Styles */
@@ -194,7 +190,7 @@ a {
 }
 
 .footer-column h3 {
-    color: #FFA500; /* Gold-ish color */
+    color: #FFA500;
     font-size: 20px;
     margin-bottom: 15px;
 }
@@ -216,17 +212,17 @@ a {
 }
 
 .footer-column ul li a:hover {
-    color: #FFA500; /* Change to gold-ish on hover */
+    color: #FFA500;
 }
 
 /* עיצוב לדף האודות */
 #about-section {
-    background-color: rgba(255, 255, 255, 0.8); /* רקע חצי שקוף */
+    background-color: rgba(255, 255, 255, 0.8);
     width: 80%;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל רך להדגשה */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -242,268 +238,45 @@ a {
     text-align: justify;
     line-height: 1.6;
 }
-/* עיצוב לדף האודות בלבד */
-#about-page .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #1F2937; /* צבע רקע */
-    transition: top 0.3s, background-color 0.3s; /* מעבר חלק */
-    z-index: 1000;
-}
 
-#about-page .navbar.scrolled {
-    background-color: #000000; /* צבע רקע נשמר כשגוללים */
-}
-
-#about-page .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#about-page .navbar nav ul li a.active {
-    color: #FFC107;
-}
-
-
-#about-page .navbar .logo {
-    display: flex;
-    align-items: center;
+/* כפתור המבורגר */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
     color: white;
 }
 
-#about-page 
-
-
-#about-page #about-section {
-    background-color: rgba(255, 255, 255, 0.8); /* רקע חצי שקוף */
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל רך להדגשה */
-    text-align: center;
-}
-
-#about-page #about-section h1 {
-    color: rgb(36, 3, 3);
-    font-size: 50px;
-    margin-bottom: 15px;
-}
-
-#about-page #about-section p {
-    font-size: 20px;
-    color: rgb(0, 0, 0);
-    text-align: justify;
-    line-height: 1.6;
-}
-#about-page .footer {
-    background-color: #F9FAFB;
-    padding: 40px 0;
-}
-
-#about-page .footer-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-#about-page .footer-column h3 {
-    color: #FFA500; /* Gold-ish color */
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-#about-page .footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-#about-page .footer-column ul li {
-    margin-bottom: 10px;
-}
-
-#about-page .footer-column ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-#about-page .footer-column ul li a:hover {
-    color: #FFA500; /* Change to gold-ish on hover */
-}
-.floating-button {
-    position: fixed;
-    bottom: 320px;
-    right: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    z-index: 100;
-    text-align: center;
-    width: 160px;
-}
-
-.floating-button a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-.floating-button .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #999;
-}
-
-.floating-button .close-btn:hover {
-    color: #000;
-}
-
-.floating-button .contact {
-    margin-bottom: 15px;
-    font-size: 16px;
-}
-
-.floating-button .social-icons a {
-    margin: 0 8px;
-}
-
-.floating-button .social-icons img.icon {
-    width: 35px;
-    height: 30px;
-    transition: transform 0.3s;
-}
-
-.floating-button .social-icons img.icon:hover {
-    transform: scale(1.2);
-}
-#about-page .floating-button {
-    position: fixed;
-    bottom: 520px;
-    right: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    z-index: 100;
-    text-align: center;
-    width: 160px;
-}
-
-#reviews-section {
-    padding: 80px 0;
-    text-align: center;
-    background-color: #F3F4F6;
-}
-
-#reviews-section h1 {
-    font-size: 86px;
-    color: #333;
-    margin-bottom: 60px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 50px;
-    max-width: 90%;
-    margin: 0 auto;
-}
-
-.review-card {
-    position: relative;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.review-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.review-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.client-quote {
-    padding: 10px;
-    font-size: 16px;
-    color: #555;
-}
-#review-page .floating-button {
-    bottom: 210px; 
-    left: 20px;    
-}
-/* עיצוב המודאל (חלון קופץ) */
-.modal {
-    display: none; /* מוסתר כברירת מחדל */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* רקע כהה */
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
-#about-page .floating-button {
-    bottom: 450px; 
-    left: 20px;    
-}
-
-/* קוד CSS נוסף לריספונסיביות */
-
-/* התאמות למסכים בגודל קטן מ-768 פיקסלים (מובייל) */
+/* עיצוב ריספונסיבי למסכים קטנים */
 @media (max-width: 768px) {
     .navbar nav ul {
         display: none;
         flex-direction: column;
         background-color: #1F2937;
         position: absolute;
-        top: 60px;
+        top: 46px;
+        right: 0;
         width: 100%;
         gap: 10px;
         padding: 10px;
+        margin: 0;
+        transition: top 0.3s ease;
     }
 
     .navbar nav ul.show {
         display: flex;
     }
 
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    /* התאמות נוספות למובייל */
     .hero-text h1 {
         font-size: 24px;
     }
@@ -511,6 +284,8 @@ a {
     .cta-button {
         font-size: 14px;
         padding: 8px 16px;
+        top: 50%; /* מיקום מותאם */
+        margin-top: 15px; /* רווח מהטקסט */
     }
 
     .image-container {
@@ -536,76 +311,5 @@ a {
     .floating-button {
         width: 140px;
         right: 10px;
-    }
-}
-
-/* התאמות למסכים בגודל קטן מ-1024 פיקסלים (טאבלטים) */
-@media (max-width: 1024px) {
-    .navbar nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .image-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .image-item {
-        width: 80%;
-    }
-
-    .footer-grid {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 28px;
-    }
-
-    .cta-button {
-        font-size: 15px;
-    }
-}
-/* כפתור המבורגר */
-.hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-/* עיצוב ריספונסיבי למסכים קטנים */
-@media (max-width: 768px) {
-    .navbar nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #1F2937;
-        position: absolute;
-        top: 46px; /* כאן ניתן לשנות את הגובה שבו התפריט נפתח */
-        right: 0;
-        width: 100%;
-        gap: 10px;
-        padding: 10px;
-        margin: 0;
-        transition: top 0.3s ease; /* מעבר חלק */
-    }
-
-    .navbar nav ul.show {
-        display: flex;
-    }
-
-    /* הצגת כפתור המבורגר במסכים קטנים */
-    .hamburger {
-        display: block;
-    }
-
-    /* עיצוב התפריט במסכים קטנים */
-    .navbar .container {
-        flex-direction: row-reverse;
-        justify-content: space-between;
     }
 }
