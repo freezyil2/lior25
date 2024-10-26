@@ -7,8 +7,6 @@
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
     height: 100%;
     overflow-x: hidden;
 }
@@ -204,16 +202,14 @@ a {
     color: #FFA500;
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
     /* כפתור המבורגר */
     .hamburger {
         display: block;
-        font-size: 24px;
-        color: white;
     }
 
-    /* הסתרת תפריט ברזולוציות קטנות */
+    /* הצגת התפריט בלחיצה על המבורגר */
     .navbar nav ul {
         display: none;
         flex-direction: column;
