@@ -628,3 +628,39 @@ a {
         padding: 0;
     }
 }
+/* סגנון כפתור המבורגר */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* הצגת כפתור המבורגר במסכים קטנים */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .navbar nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1F2937;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .navbar nav ul.show {
+        display: flex;
+    }
+
+    /* עיצוב לתצוגת סגירה של התפריט */
+    .navbar .container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
