@@ -11,260 +11,41 @@ body, html {
     overflow-x: hidden;
 }
 
+/* Container */
 .container {
     width: 90%;
     margin: 0 auto;
 }
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-/* Navigation Bar */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    height: 60px;
     background-color: #1F2937;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.navbar.scrolled {
-    background-color: #000000;
-}
-
-.navbar .logo {
-    display: flex;
-    align-items: center;
-    color: white;
+    z-index: 1000;
+    transition: top 0.3s, background-color 0.3s;
 }
 
 .navbar .logo img {
     width: 100px;
-    margin-left: 10px;
 }
 
-.navbar nav ul {
-    display: flex;
-    gap: 15px;
-}
-
-.navbar nav ul li a {
-    color: white;
-    font-size: 16px;
-    padding: 5px 10px;
-}
-
-.navbar nav ul li a.active {
-    color: #FFC107;
-}
-
-/* כפתור המבורגר */
-.hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-}
-
-.hero-image img {
-    width: 100%;
+/* General Icon */
+.icon {
+    max-width: 50px;
+    max-height: 50px;
+    width: auto;
     height: auto;
-    display: block;
 }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-}
-
-.hero-text h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #FFC107;
-    padding: 10px 20px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 5px;
-    text-align: center;
-    white-space: nowrap;
-    min-width: 120px;
-}
-
-/* Main Content Section */
-.main-content {
-    padding: 40px 0;
-}
-
-.image-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px 0;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.image-item {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.image-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.text-overlay {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    width: 80%;
-    border-radius: 5px;
-}
-
-/* Footer Section */
-.footer {
-    background-color: #F9FAFB;
-    padding: 40px 0;
-}
-
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-column h3 {
-    color: #FFA500;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-.footer-column ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
-    color: #FFA500;
-}
-
-/* Responsive Adjustments for Mobile */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    /* כפתור המבורגר */
-    .hamburger {
-        display: block;
+    .icon {
+        max-width: 40px;
+        max-height: 40px;
     }
-
-    /* הצגת התפריט בלחיצה על המבורגר */
     .navbar nav ul {
-        display: none;
         flex-direction: column;
-        background-color: #1F2937;
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        gap: 10px;
-        padding: 10px;
     }
-
-    .navbar nav ul.show {
-        display: flex;
-    }
-
-    .navbar .logo {
-        margin-left: 20px;
-    }
-
-    /* טקסט כותרת */
-    .hero-text h1 {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-
-    .cta-button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    /* התוכן הראשי */
-    .image-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .image-item {
-        max-width: 100%;
-    }
-
-    /* כותרות ופרטי התוכן */
-    .text-overlay {
-        font-size: 18px;
-        padding: 8px;
-    }
-
-    /* עיצוב לפוטר */
-    .footer-grid {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .footer-column {
-        min-width: auto;
-    }
+    /* More responsive adjustments */
 }
