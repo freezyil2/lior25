@@ -96,21 +96,17 @@ a {
     margin-bottom: 20px;
 }
 
+/* סגנון כללי */
 .cta-button {
-    background-color: #FFC107;
     padding: 10px 20px;
-    color: white;
+    background-color: #ffc107;
+    color: #ffffff;
+    font-size: 18px;
     border: none;
     cursor: pointer;
-    font-size: 15px;
     border-radius: 5px;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    white-space: nowrap; /* מונע גלישת טקסט */
-    min-width: 120px;    /* מבטיח מספיק מקום לטקסט */
+    position: relative;
+    z-index: 10;
 }
 
 /* עבור מסכים קטנים יותר, כמו טלפונים ניידים */
