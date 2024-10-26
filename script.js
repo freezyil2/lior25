@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // לחיצה על כפתור ה-CTA
-    document.querySelector('.cta-button').addEventListener('click', function() {
-        alert('חקור את ההפלגות המיוחדות שלנו!');
-    });
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function() {
+            alert('חקור את ההפלגות המיוחדות שלנו!');
+        });
+    }
 
     // תפריט ניווט - הצגת תפריט המבורגר במובייל
     const navbar = document.querySelector('.navbar');
@@ -22,16 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // סגירת תיבת קשר צפה
     const contactBox = document.getElementById('contactBox');
     if (contactBox) {
-        contactBox.querySelector('.close-btn').addEventListener('click', () => {
-            contactBox.style.display = 'none';
-        });
+        const closeBtn = contactBox.querySelector('.close-btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                contactBox.style.display = 'none';
+            });
+        }
     }
 
     // תפריט המבורגר
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".navbar nav ul");
 
-    hamburger.addEventListener("click", function() {
-        navMenu.classList.toggle("show");
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", function() {
+            navMenu.classList.toggle("show");
+        });
+    }
 });
