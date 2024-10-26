@@ -33,3 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
         navMenu.classList.toggle("show");
     });
 });
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("show");
+    }
+</script>
