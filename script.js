@@ -20,12 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // סגירת תיבת קשר צפה
-    document.getElementById('contactBox').querySelector('.close-btn').addEventListener('click', () => {
-        document.getElementById('contactBox').style.display = 'none';
-    });
-});
-// תפריט המבורגר
-document.addEventListener("DOMContentLoaded", function() {
+    const contactBox = document.getElementById('contactBox');
+    if (contactBox) {
+        contactBox.querySelector('.close-btn').addEventListener('click', () => {
+            contactBox.style.display = 'none';
+        });
+    }
+
+    // תפריט המבורגר
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".navbar nav ul");
 
@@ -33,9 +35,3 @@ document.addEventListener("DOMContentLoaded", function() {
         navMenu.classList.toggle("show");
     });
 });
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("show");
-    }
-</script>
