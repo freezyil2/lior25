@@ -6,8 +6,11 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    direction: rtl;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* מבטיח שהתוכן יתפוס רק 100% מגובה המסך */
+    overflow-x: hidden; /* מונע גלילה אופקית */
 }
 
 .container {
@@ -29,19 +32,29 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #1F2937;
-    transition: top 0.3s, background-color 0.3s;
     z-index: 1000;
+    height: 60px; /* גובה מוגדר */
+    background-color: #1F2937;
+    overflow: hidden; /* מונע גלישה */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .navbar.scrolled {
     background-color: #000000;
 }
 
-.navbar .container {
+.navbar .logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    color: white;
+}
+
+.navbar .logo img {
+    width: 100px;
+    margin-left: 10px;
 }
 
 .navbar nav ul {
@@ -59,15 +72,12 @@ a {
     color: #FFC107;
 }
 
-.navbar .logo {
-    display: flex;
-    align-items: center;
+/* כפתור המבורגר */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
     color: white;
-}
-
-.navbar .logo img {
-    width: 100px;
-    margin-left: 10px;
 }
 
 /* Hero Section */
@@ -196,43 +206,25 @@ a {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    /* Navbar */
-    .navbar .container {
-        flex-direction: column;
-        align-items: center;
+    /* כפתור המבורגר */
+    .hamburger {
+        display: block; /* הצגת כפתור המבורגר במובייל */
     }
 
+    /* הסתרת תפריט ברזולוציות קטנות */
     .navbar nav ul {
+        display: none; /* הסתרת תפריט במצב רגיל */
         flex-direction: column;
         gap: 10px;
+        background-color: #1F2937;
+        padding: 10px;
+        position: absolute;
+        top: 60px; /* מתחיל מתחת לסרגל הניווט */
+        right: 0;
+        width: 100%;
     }
 
-    .hero-text h1 {
-        font-size: 24px;
-    }
-
-    .cta-button {
-        font-size: 14px;
-    }
-
-    /* Main Content */
-    .image-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .text-overlay {
-        font-size: 18px;
-    }
-
-    /* Footer */
-    .footer-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-column {
-        min-width: auto;
-        text-align: center;
+    .navbar nav ul.show {
+        display: flex; /* הצגת תפריט כאשר לוחצים על המבורגר */
     }
 }
