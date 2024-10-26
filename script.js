@@ -47,3 +47,7 @@ modal.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+function toggleMenu() {
+    const navMenu = document.querySelector(".navbar nav ul");
+    navMenu.classList.toggle("show");
+}
